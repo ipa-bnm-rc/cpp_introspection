@@ -282,7 +282,7 @@ namespace cpp_introspection {
     PackagePtr package __attribute__((unused)) = (*load_fcn)();
 
     ROS_INFO_STREAM_NAMED(ROS_PACKAGE_NAME, "Successfully loaded cpp_introspection library " << path);
-    g_loaded_libraries.push_back(path.filename());
+    g_loaded_libraries.push_back(path.filename().string());
 
 //      for(Package::const_iterator it = package->begin(); it != package->end(); ++it) {
 //        ROS_INFO_STREAM_NAMED(ROS_PACKAGE_NAME, "Package " << package->getName() << " contains message " << (*it)->getName() << ":");
